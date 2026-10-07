@@ -1,0 +1,95 @@
+#profile.screen.active{display:block;padding:0;background:#f4f8fa;color:#263746}
+#profile .profile-cover{min-height:164px;background:#074b72;color:#fff}
+#profile .profile-cover-content{width:min(1210px,calc(100% - 48px));margin:0 auto;padding:27px 0 22px 238px}
+#profile .profile-cover .tiny-label{color:#b9d8e9;font-size:9px;margin:0 0 8px}
+#profile .profile-cover h1{margin:0 0 4px;font:600 clamp(27px,3vw,36px)/1.1 Arial,sans-serif;letter-spacing:-.025em}
+#profile .profile-cover-content>p:not(.tiny-label){margin:0 0 13px;font:16px Arial,sans-serif;color:#eef7fc}
+#profile .profile-verification{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.8);border-radius:999px;padding:3px 11px 3px 3px;font:800 9px Arial,sans-serif;letter-spacing:.04em}
+#profile .profile-verification b{width:23px;height:23px;border-radius:50%;display:grid;place-items:center;background:#76c342;color:#fff;font-size:11px}
+#profile .profile-page{min-height:680px;background:#fff}
+#profile .profile-layout{width:min(1210px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px}
+#profile .profile-sidebar{position:relative;z-index:1;margin-top:-104px;padding:0;background:transparent;border:0;border-radius:0;color:#253746}
+#profile .profile-avatar{position:relative;width:180px;height:180px;display:grid;place-items:center;margin:0 0 16px;padding:0;border:2px solid #fff;border-radius:50%;background:#f3f3f3;box-shadow:0 1px 4px #0002;overflow:hidden;cursor:pointer}
+#profile .profile-avatar svg{display:block;width:100%;height:100%}
+#profile .profile-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+#profile .profile-avatar-edit{position:absolute;inset:auto 0 0;padding:12px 5px 10px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font:700 11px Arial,sans-serif;opacity:.9}
+#profile .profile-avatar:hover .profile-avatar-edit{opacity:1}
+#profile .profile-avatar:focus-visible{outline:3px solid #0784ca;outline-offset:3px}
+#profile .profile-name{font:600 16px Arial,sans-serif;color:#203747}
+#profile .profile-role{margin:4px 0 18px;color:#70808c;font:12px Arial,sans-serif}
+#profile .profile-action{width:100%;min-height:40px;margin:0 0 8px;display:flex;align-items:center;justify-content:center;gap:9px;border:1px solid #07517e;border-radius:999px;background:#fff;color:#064e79;text-transform:uppercase;font:700 12px Arial,sans-serif;letter-spacing:.03em;transition:background .15s,color .15s}
+#profile .profile-action:hover{background:#07517e;color:#fff}
+#profile .profile-action span{font-size:16px;line-height:1}
+#profile .profile-tools{margin-top:22px;padding-top:14px;border-top:1px solid #e4e9ec}
+#profile .profile-nav{display:grid;gap:5px;margin:0 0 10px}
+#profile .profile-tab{padding:8px 9px;border:1px solid transparent;border-radius:5px;background:transparent;color:#516575;text-align:left;font:12px Arial,sans-serif}
+#profile .profile-tab.active,#profile .profile-tab:hover{border-color:#cbd9e2;background:#f1f6f8;color:#074b72}
+#profile .small-dark-btn{margin:5px 0 0;border-color:#c9d7df;background:#fff;color:#23465c;font:12px Arial,sans-serif}
+#profile .small-dark-btn:hover{background:#edf4f7}
+#profile .profile-main{min-width:0;padding:28px 0 36px;background:transparent;border:0;border-radius:0;color:#263746}
+#profile .profile-details{display:grid;gap:20px;margin:0 0 25px}
+#profile .profile-fact h2,#profile .profile-section-label{margin:0 0 5px;color:#064e79;font:700 12px Arial,sans-serif;letter-spacing:.12em}
+#profile .profile-fact p{margin:0;color:#586b78;font:16px/1.4 Arial,sans-serif}
+#profile .profile-fact-heading{display:flex;align-items:center;gap:12px;margin-bottom:5px}
+#profile .profile-fact-heading h2{margin:0}
+#profile .profile-fact-heading button{padding:2px 0;border:0;background:transparent;color:#0784ca;font:12px Arial,sans-serif}
+#profile .profile-fact-heading button:hover{text-decoration:underline}
+#profile .profile-description-fact p{max-width:850px;white-space:pre-line}
+#profile .profile-section-label{margin-bottom:10px}
+#profile .ratings-card{display:flex;align-items:center;gap:14px;min-height:85px;padding:18px 20px;border:1px solid #d9dfe3;border-radius:10px;background:#fff}
+#profile .rating-stars{display:flex;gap:3px;color:#f2b544;font:32px/1 Arial,sans-serif}
+#profile .ratings-card p{margin:0;color:#586b78;font:13px Arial,sans-serif}
+#verificationModal .verification-privacy{margin:0;color:#657681;font:12px/1.5 Arial,sans-serif}
+#verificationModal input[type=file]{padding:12px;background:#f8fafb;color:#263746;border-color:#cbd8df}
+#profile .profile-management{margin-top:28px;padding-top:20px;border-top:1px solid #e2e8eb}
+#profile .profile-panel{display:none}
+#profile .profile-panel.active{display:block}
+#profile .panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+#profile .panel-title h3{margin:0;color:#203747;font:500 17px Georgia,'Times New Roman',serif}
+#profile .panel-title span{color:#788792;font:11px Arial,sans-serif}
+#profile .list{display:grid;gap:8px}
+#profile .resume-box,#profile .myjob-row,#profile .status-row{padding:12px;border:1px solid #d9dfe3;border-radius:8px;background:#f8fafb;color:#263746}
+#profile .resume-box{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#profile .resume-box strong{font:12px Arial,sans-serif}
+#profile .resume-box p{margin:4px 0 0;color:#71808a;font:11px Arial,sans-serif}
+#profile .resume-actions{display:flex;align-items:center;gap:6px}
+#profile .myjob-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#profile .job-left{min-width:0}
+#profile .job-left strong{display:block;font:500 13px Arial,sans-serif}
+#profile .job-left span{color:#71808a;font:11px Arial,sans-serif}
+#profile .application-actions{display:flex;align-items:center;gap:8px}
+#profile .review-actions{display:flex;gap:6px}
+#profile .review-actions .mini-btn{width:auto;margin-top:0}
+#profile .mini-btn{width:auto;margin-top:0;padding:7px 10px;border:1px solid #c9d7df;border-radius:5px;background:#fff;color:#23465c;font:11px Arial,sans-serif}
+#profile .accept-application-btn{color:#277747;border-color:#b4d6c1}
+#profile .reject-application-btn,#profile .cancel-application-btn,#profile .logout-btn{color:#a33a35;border-color:#e0b9b6}
+#profile .status-chip{padding:5px 8px;border-radius:999px;background:#edf3f6;color:#805a12;font:10px Arial,sans-serif}
+#profile .status-approved{color:#277747}
+#profile .status-rejected{color:#a33a35}
+#profile .client-only[hidden]{display:none!important}
+#profile .worker-only[hidden]{display:none!important}
+@media(max-width:900px){
+    #profile .profile-cover-content{padding-left:210px}
+    #profile .profile-layout{grid-template-columns:170px minmax(0,1fr);gap:20px}
+    #profile .profile-avatar{width:158px;height:158px}
+}
+@media(max-width:650px){
+    #profile .profile-cover{min-height:190px}
+    #profile .profile-cover-content{width:calc(100% - 30px);padding:22px 0 20px 0}
+    #profile .profile-cover h1{font-size:27px}
+    #profile .profile-cover-content>p:not(.tiny-label){font-size:14px}
+    #profile .profile-page{min-height:0}
+    #profile .profile-layout{width:calc(100% - 30px);grid-template-columns:1fr;gap:0}
+    #profile .profile-sidebar{margin-top:-66px;display:grid;grid-template-columns:110px minmax(0,1fr);column-gap:14px;align-items:center}
+    #profile .profile-avatar{grid-row:span 2;width:110px;height:110px;margin:0}
+    #profile .profile-name{align-self:end;font-size:14px}
+    #profile .profile-role{align-self:start;margin:5px 0 0;font-size:11px}
+    #profile .profile-action{grid-column:1/-1;min-height:38px;margin-top:8px}
+    #profile .profile-tools{grid-column:1/-1;margin-top:14px}
+    #profile .profile-main{padding:22px 0 30px}
+    #profile .profile-details{gap:17px;margin-bottom:23px}
+    #profile .ratings-card{align-items:flex-start;flex-direction:column;gap:8px}
+    #profile .resume-box,#profile .myjob-row{align-items:flex-start}
+    #profile .application-actions{align-items:flex-end;flex-direction:column;gap:5px}
+    #profile .review-actions{flex-wrap:wrap}
+}
