@@ -64,13 +64,54 @@ class WorkerVerificationTest extends TestCase
         Storage::disk('local')->assertExists($worker->fresh()->verification_document_path);
     }
 
-    public function test_client_cannot_submit_an_identity_document(): void
+    public function test_client_can_submit_id_and_workers_can_view_only_the_client_profile_proof_route(): void
+    {
+        Storage::fake('local');
+        $client = User::factory()->create([
+            'role' => 'client',
+            'birth_date' => '1990-02-03',
+            'gender' => 'Woman',
+            'birthplace' => 'Cebu City',
+            'profile_description' => 'I hire for remote projects.',
+        ]);
+        $worker = User::factory()->create(['role' => 'worker']);
+
+        $upload = $this->actingAs($client)->postJson('/profile/verification', [
+            'document' => $this->fakePng(),
+            'preview' => $this->fakePng(),
+        ]);
+        $upload->assertOk()->assertJsonPath('status', 'pending');
+
+        $profile = $this->actingAs($worker)->getJson('/clients/'.$client->id.'/profile');
+        $profile->assertOk()
+            ->assertJsonPath('profile.name', $client->name)
+            ->assertJsonPath('profile.gender', 'Woman')
+            ->assertJsonPath('profile.location', 'Cebu City')
+            ->assertJsonPath('profile.overview', 'I hire for remote projects.')
+            ->assertJsonPath('profile.id_proof_available', true)
+            ->assertJsonMissingPath('profile.birth_date');
+
+        $this->assertNotSame(
+            $client->fresh()->verification_document_path,
+            $client->fresh()->verification_preview_path,
+        );
+        Storage::disk('local')->assertExists($client->fresh()->verification_document_path);
+        Storage::disk('local')->assertExists($client->fresh()->verification_preview_path);
+        $proofUrl = $profile->json('profile.id_proof_url');
+        $this->get($proofUrl)->assertOk()
+            ->assertHeader('Cache-Control', 'no-store, private')
+            ->assertHeader('X-Content-Type-Options', 'nosniff');
+
+        $this->actingAs($client)->getJson('/clients/'.$client->id.'/profile')->assertForbidden();
+        $this->actingAs($client)->get($proofUrl)->assertForbidden();
+    }
+
+    public function test_guest_cannot_view_a_client_identity_proof(): void
     {
         $client = User::factory()->create(['role' => 'client']);
 
-        $this->actingAs($client)->postJson('/profile/verification', [
-            'document' => UploadedFile::fake()->create('id.pdf', 200, 'application/pdf'),
-        ])->assertForbidden();
+        $this->getJson('/clients/'.$client->id.'/profile')->assertUnauthorized();
+        $this->getJson('/clients/'.$client->id.'/id-proof')->assertUnauthorized();
     }
 
     public function test_guest_cannot_submit_an_identity_document(): void
@@ -90,9 +131,15 @@ class WorkerVerificationTest extends TestCase
             'skills' => 'JavaScript, PHP',
             'education' => 'Example College, BS Information Technology',
             'description' => 'A detail-oriented developer with experience building web apps.',
+            'birth_date' => '1995-06-10',
+            'gender' => 'Non-binary',
+            'birthplace' => 'Davao City',
         ])->assertOk()
             ->assertJsonPath('profile.education', 'Example College, BS Information Technology')
-            ->assertJsonPath('profile.description', 'A detail-oriented developer with experience building web apps.');
+            ->assertJsonPath('profile.description', 'A detail-oriented developer with experience building web apps.')
+            ->assertJsonPath('profile.birth_date', '1995-06-10')
+            ->assertJsonPath('profile.gender', 'Non-binary')
+            ->assertJsonPath('profile.birthplace', 'Davao City');
 
         $this->assertSame('Alex Worker', $worker->fresh()->name);
         $this->assertSame('JavaScript, PHP', $worker->fresh()->profile_skills);

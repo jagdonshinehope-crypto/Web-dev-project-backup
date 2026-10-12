@@ -10,8 +10,8 @@ export const state = {
     applications: read('wb_applications', []),
     resume: read('wb_resume', null),
     profile: read('wb_profile', { name: '', title: '', skills: '', bio: '' }),
-    messages: read('wb_messages', [{ id: 'support', name: 'WorkBridge Support', sub: 'Platform support', unread: false, chat: [{ who: 'them', text: 'Welcome to WorkBridge. Need help with your profile or application?' }] }]),
-    clientJobs: read('wb_clientJobs', []),
+    messages: [],
+    clientJobs: [],
     activeJob: null,
     selectedChat: null,
     onboardingComplete: localStorage.getItem('wb_onboarding_complete') === '1',
@@ -25,8 +25,8 @@ export function persist() {
     localStorage.setItem('wb_starred', JSON.stringify(state.starred));
     localStorage.setItem('wb_applications', JSON.stringify(state.applications));
     localStorage.setItem('wb_profile', JSON.stringify(state.profile));
-    localStorage.setItem('wb_messages', JSON.stringify(state.messages));
-    localStorage.setItem('wb_clientJobs', JSON.stringify(state.clientJobs));
+    localStorage.removeItem('wb_messages');
+    localStorage.removeItem('wb_clientJobs');
     if (state.resume) localStorage.setItem('wb_resume', JSON.stringify(state.resume));
     else localStorage.removeItem('wb_resume');
     localStorage.setItem('wb_onboarding_complete', state.onboardingComplete ? '1' : '0');

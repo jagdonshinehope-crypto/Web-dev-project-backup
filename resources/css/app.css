@@ -4,9 +4,10 @@
 @import './profile.css';
 @import './mess.css';
 @import './signin.css';
+@import './feedback.css';
 
-:root{--bg:#070707;--panel:#101010;--line:#292929;--text:#f5f5f5;--muted:#858585;--orange:#ff8a00}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Georgia,'Times New Roman',serif;font-size:2em}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--orange);outline-offset:2px}.site-bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 85% 10%,rgba(255,138,0,.08),transparent 28%),radial-gradient(circle at 10% 70%,rgba(28,124,255,.06),transparent 30%),#070707}.topbar{height:70px;padding:0 34px;border-bottom:1px solid #1c1c1c;display:flex;align-items:center;gap:30px;position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px)}.brand,.nav-link,.login-link{background:none;border:0;color:#fff}.brand{display:flex;align-items:center;gap:9px;font:800 11px Arial,sans-serif;letter-spacing:.15em}.brand-icon,.mini-mark{width:28px;height:28px;border:1px solid #ddd;border-radius:50%;display:grid;place-items:center;font:11px Arial,sans-serif}.nav{display:flex;gap:24px;margin-left:auto}.nav-link,.login-link{color:#808080;font:11px Arial,sans-serif}.nav-link:hover,.nav-link.active,.login-link:hover{color:#fff}.top-actions{display:flex;gap:11px;align-items:center}.pill-btn{border:1px solid transparent;border-radius:7px;padding:10px 15px;font:800 11px Arial,sans-serif;transition:.18s}.pill-btn:hover{transform:translateY(-1px)}.pill-orange{background:var(--orange);color:#111}.pill-dark{background:#151515;border-color:#2e2e2e;color:#fff}.pill-outline{background:transparent;border-color:#424242;color:#fff}.menu-btn{display:none;margin-left:auto;background:#111;border:1px solid #2a2a2a;color:#fff;border-radius:6px;padding:7px 10px;font:11px Arial,sans-serif}.screen{display:none;min-height:calc(100vh - 70px);padding:42px 58px}.screen.active{display:flex;flex-direction:column}.tiny-label{display:block;color:#777;font:800 8px Arial,sans-serif;letter-spacing:.17em}h1,h2,h3,p{margin-top:0}h1{font-size:25px;font-weight:400}h1 span,h2 span{font-weight:700}.screen-head{max-width:820px;margin:5px auto 25px;text-align:center}.screen-head.left{text-align:left;margin-left:0}.screen-head h2{font-size:35px;line-height:1.03;font-weight:500;margin:8px 0 10px}.screen-head p:last-child{color:#777;font:10px Arial,sans-serif}.small-dark-btn,.mini-btn{width:100%;margin-top:10px;background:#171717;border:1px solid #2a2a2a;color:#fff;border-radius:6px;padding:8px 9px;font:9px Arial,sans-serif}.toast{position:fixed;right:20px;bottom:20px;z-index:150;background:#fff;color:#111;padding:9px 12px;border-radius:7px;font:800 9px Arial,sans-serif;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
+:root{--bg:#070707;--panel:#101010;--line:#292929;--text:#f5f5f5;--muted:#858585;--orange:#ff8a00;--font-xs:.75rem;--font-sm:.875rem;--font-base:1rem;--font-md:1.125rem;--font-lg:1.25rem;--font-xl:1.5rem;--font-2xl:2rem;--font-3xl:2.5rem;--line-height-tight:1.2;--line-height-heading:1.3;--line-height-body:1.6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Georgia,'Times New Roman',serif;font-size:var(--font-base);line-height:var(--line-height-body)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--orange);outline-offset:2px}.site-bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 85% 10%,rgba(255,138,0,.08),transparent 28%),radial-gradient(circle at 10% 70%,rgba(28,124,255,.06),transparent 30%),#070707}.topbar{min-height:70px;padding:0 34px;border-bottom:1px solid #1c1c1c;display:flex;align-items:center;gap:30px;position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px)}.brand,.nav-link,.login-link{background:none;border:0;color:#fff}.brand{display:flex;align-items:center;gap:9px;font:800 var(--font-sm) Arial,sans-serif;letter-spacing:.15em}.brand-icon,.mini-mark{width:28px;height:28px;border:1px solid #ddd;border-radius:50%;display:grid;place-items:center;font:var(--font-sm) Arial,sans-serif}.nav{display:flex;gap:clamp(12px,2vw,24px);margin-left:auto}.nav-link,.login-link{color:#808080;font:var(--font-base) Arial,sans-serif}.nav-link:hover,.nav-link.active,.login-link:hover{color:#fff}.top-actions{display:flex;gap:11px;align-items:center}.pill-btn{border:1px solid transparent;border-radius:7px;padding:10px 15px;font:800 var(--font-base) Arial,sans-serif;line-height:var(--line-height-tight);transition:.18s}.pill-btn:hover{transform:translateY(-1px)}.pill-orange{background:var(--orange);color:#111}.pill-dark{background:#151515;border-color:#2e2e2e;color:#fff}.pill-outline{background:transparent;border-color:#424242;color:#fff}.menu-btn{display:none;margin-left:auto;background:#111;border:1px solid #2a2a2a;color:#fff;border-radius:6px;padding:7px 10px;font:var(--font-base) Arial,sans-serif}.screen{display:none;min-height:calc(100vh - 70px);padding:42px 58px}.screen.active{display:flex;flex-direction:column}.tiny-label{display:block;color:#777;font:800 var(--font-xs) Arial,sans-serif;letter-spacing:.17em}h1,h2,h3,p{margin-top:0}h1{font-size:var(--font-2xl);line-height:var(--line-height-heading);font-weight:400}h1 span,h2 span{font-weight:700}.screen-head{max-width:820px;margin:5px auto 25px;text-align:center}.screen-head.left{text-align:left;margin-left:0}.screen-head h2{font-size:clamp(var(--font-2xl),3vw,var(--font-3xl));line-height:var(--line-height-tight);font-weight:500;margin:8px 0 10px}.screen-head p:last-child{color:#777;font:var(--font-base)/var(--line-height-body) Arial,sans-serif}.small-dark-btn,.mini-btn{width:100%;margin-top:10px;background:#171717;border:1px solid #2a2a2a;color:#fff;border-radius:6px;padding:8px 9px;font:var(--font-sm) Arial,sans-serif;line-height:var(--line-height-tight)}.toast{position:fixed;right:20px;bottom:20px;z-index:150;background:#fff;color:#111;padding:12px 16px;border-radius:7px;font:700 var(--font-sm)/var(--line-height-body) Arial,sans-serif;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.nav{display:none}.nav.mobile-open{display:flex;position:absolute;top:70px;left:0;right:0;background:#0d0d0d;padding:16px;flex-direction:column}.menu-btn{display:block}.screen{padding:30px 24px}}
 @media(max-width:650px){.topbar{height:62px;padding:0 16px}.screen{min-height:calc(100vh - 62px);padding:30px 15px}.top-actions{display:none}.theme-toggle{margin-left:auto}.screen-head h2{font-size:26px}}
 
@@ -16,20 +17,298 @@ body:has(#welcome.active) .screen{min-height:100vh}
 @media(max-width:650px){.home-footer{margin-top:42px;flex-wrap:wrap;line-height:1.5}.home-footer span:nth-child(2){order:3;width:100%}}
 
 .theme-toggle{width:32px;height:32px;border:1px solid #333;border-radius:50%;background:#151515;color:#f7c46c;display:grid;place-items:center;font:16px Arial,sans-serif;transition:.2s}.theme-toggle:hover{border-color:var(--orange);transform:rotate(15deg)}
+.brand-logo,.mini-logo{display:block;width:28px;height:28px;object-fit:contain}
+.mini-logo{width:30px;height:30px}
+
 .light-mode{--bg:#f4f1eb;--panel:#fffdfa;--line:#d8d1c6;--text:#1d1a17;--muted:#6f675e;--orange:#d96b00}.light-mode body{background:var(--bg);color:var(--text)}.light-mode .site-bg{background:radial-gradient(circle at 85% 10%,rgba(255,174,77,.18),transparent 28%),radial-gradient(circle at 10% 70%,rgba(92,143,203,.12),transparent 30%),#f4f1eb}.light-mode .topbar{background:rgba(244,241,235,.94);border-color:#ddd6ca}.light-mode .brand,.light-mode .nav-link,.light-mode .login-link{color:#211e1a}.light-mode .nav-link,.light-mode .login-link{color:#756d64}.light-mode .nav-link:hover,.light-mode .nav-link.active,.light-mode .login-link:hover{color:#171411}.light-mode .brand-icon,.light-mode .mini-mark{border-color:#302b25}.light-mode .theme-toggle{background:#fffdfa;border-color:#cfc5b8;color:#a45300}.light-mode .pill-dark,.light-mode .pill-outline,.light-mode .small-dark-btn,.light-mode .mini-btn,.light-mode .job-btn{background:#fffdfa;border-color:#cfc5b8;color:#25211d}.light-mode .side-panel,.light-mode .score-panel,.light-mode .profile-sidebar,.light-mode .profile-main,.light-mode .conversation-list,.light-mode .chat-window,.light-mode .about-card,.light-mode .job-card,.light-mode .module-card{background:#fffdfa;border-color:#d8d1c6}.light-mode .job-card:hover,.light-mode .conversation.active,.light-mode .conversation:hover{background:#f0ebe3}.light-mode .conversation,.light-mode .profile-tab{background:#fffdfa;color:#28231e;border-color:#e2dbd1}.light-mode .conversation-list-head,.light-mode .chat-head,.light-mode .chat-form{border-color:#d8d1c6}.light-mode .job-toolbar input,.light-mode .chat-form input,.light-mode .account-form input,.light-mode .account-form textarea{background:#fffdfa;color:#211e1a;border-color:#cfc5b8}.light-mode .category-btn{background:#fffdfa;border-color:#cfc5b8;color:#756d64}.light-mode .category-btn.active,.light-mode .category-btn:hover{background:#e9e1d6;color:#211e1a}.light-mode .job-tags span{background:#eee8df;border-color:#ddd4c8;color:#6f675e}.light-mode .bubble.them{background:#eee9e2;border-color:#d8d1c6;color:#302b25}.light-mode .bubble.me{background:#fff0d9;border-color:#e1ae68;color:#5b3510}.light-mode .modal-card{background:#fffdfa;border-color:#d8d1c6}.light-mode .choice,.light-mode .account-switch button{background:#f5f0e9;border-color:#d8d1c6;color:#2c2721}.light-mode .choice span,.light-mode .modal-card>p:not(.tiny-label){color:#756d64}.light-mode .close-btn{background:#f1ebe3;border-color:#cfc5b8;color:#514940}.light-mode .resume-box,.light-mode .myjob-row,.light-mode .status-row{background:#f5f0e9;border-color:#d8d1c6}.light-mode .readiness-bar,.light-mode .score-bar{background:#e0d8ce}.light-mode .role-card.client{background:#fffdfa}.light-mode .role-card.worker{background:#eee8fb}.light-mode .screen-head p:last-child,.light-mode .welcome-sub,.light-mode .detail-copy{color:#756d64}.light-mode .welcome-copy h1 span{color:#4a433b}
-.site-footer{width:100%;max-width:1180px;margin:36px auto 0;padding:28px 22px;border-top:1px solid var(--line);background:transparent;color:var(--muted);font:0.65rem/1.4 Arial,sans-serif;border-radius:6px}
+.site-footer{width:100%;max-width:1180px;margin:36px auto 0;padding:28px 22px;border-top:1px solid var(--line);background:transparent;color:var(--muted);font:var(--font-sm)/var(--line-height-body) Arial,sans-serif;border-radius:6px}
 .site-footer .footer-inner{display:grid;grid-template-columns:1fr 140px 140px 220px;gap:28px;align-items:start}
-.site-footer .footer-col h4{margin:0 0 8px;font-weight:700;color:var(--text);font-size:0.9rem}
+.site-footer .footer-col h4{margin:0 0 8px;font-weight:700;color:var(--text);font-size:var(--font-base)}
 .site-footer .footer-brand .mini-brand{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.16em;color:var(--text)}
-.site-footer .footer-desc{margin-top:10px;color:var(--muted);font-size:0.82rem}
+.site-footer .footer-desc{margin-top:10px;color:var(--muted);font-size:var(--font-sm);line-height:var(--line-height-body)}
 .site-footer .footer-nav{display:flex;flex-direction:column;gap:8px}
 .site-footer .footer-nav button{background:none;border:0;padding:0;color:var(--muted);text-align:left}
 .site-footer .footer-nav button:hover{color:var(--orange);text-decoration:underline}
-.site-footer .footer-contact address{font-style:normal;color:var(--muted);font-size:0.82rem}
+.site-footer .footer-contact address{font-style:normal;color:var(--muted);font-size:var(--font-sm)}
 .site-footer .socials{margin-top:10px;display:flex;gap:8px}
-.site-footer .socials button{background:#fff;border:1px solid #e6e0d6;padding:6px 8px;border-radius:6px;font-size:0.7rem}
-.site-footer .footer-bottom{margin-top:18px;border-top:1px solid rgba(0,0,0,0.03);padding-top:12px;color:var(--muted);font-size:0.75rem}
-.onboarding-screen{align-items:center;justify-content:center;background:#f4f1eb}.onboarding-card{width:min(680px,100%);background:#fffdfa;border:1px solid #d8d1c6;border-radius:16px;padding:38px;box-shadow:0 18px 45px rgba(44,34,23,.12)}.onboarding-progress{height:5px;background:#e5ded4;border-radius:4px;margin-bottom:32px}.onboarding-progress span{display:block;height:100%;width:12.5%;background:#b35400;border-radius:4px;transition:width .2s}.onboarding-step{display:none}.onboarding-step.active{display:block}.onboarding-step h2{font:700 30px/1.15 Arial,sans-serif;color:#211e1a;margin:12px 0}.onboarding-step p{font:16px/1.5 Arial,sans-serif;color:#6f675e}.onboarding-step label{display:block;margin:20px 0 0;font:700 14px Arial,sans-serif;color:#302a24}.onboarding-step input{display:block;width:100%;margin-top:8px;padding:13px;border:1px solid #cfc5b8;border-radius:8px;background:#fff;color:#211e1a;font:16px Arial,sans-serif}.onboarding-options{display:grid;gap:10px;margin-top:24px}.onboarding-options button{padding:15px;text-align:left;border:1px solid #cfc5b8;border-radius:8px;background:#fff;color:#302a24;font:15px Arial,sans-serif}.onboarding-options button.selected,.onboarding-options button:hover{border-color:#b35400;background:#fff0df}.onboarding-info{padding:20px;border-radius:10px;background:#f1ebe3;color:#4b4239;font:15px/1.5 Arial,sans-serif;margin-top:24px}.onboarding-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}.check-row{display:flex!important;align-items:center;gap:10px}.check-row input{width:18px!important;margin:0!important}.message-filters{width:min(1050px,100%);margin:0 auto 14px;display:flex;gap:8px}.message-filter{border:1px solid #cfc5b8;background:#fffdfa;color:#5f574e;border-radius:18px;padding:8px 16px;font:14px Arial,sans-serif}.message-filter.active,.message-filter:hover{background:#087f5b;color:#fff;border-color:#087f5b}.conversation-list-head input{width:100%;margin-top:10px;padding:8px;border:1px solid #cfc5b8;border-radius:6px;background:#fff;color:#302a24;font:13px Arial,sans-serif}.empty-chat{margin:auto;color:#6f675e;font:15px Arial,sans-serif;text-align:center}.skill-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 10px}.skill-options label{margin:0!important;padding:9px;background:#f1ebe3;border-radius:6px;font-weight:400!important}.skill-options input{display:inline!important;width:auto!important;margin:0 6px 0 0!important}
+.site-footer .socials button{background:#fff;border:1px solid #e6e0d6;padding:7px 10px;border-radius:6px;font-size:var(--font-xs)}
+.site-footer .footer-bottom{margin-top:18px;border-top:1px solid rgba(0,0,0,0.03);padding-top:12px;color:var(--muted);font-size:var(--font-xs)}
+.onboarding-screen{align-items:center;justify-content:center;background:#f4f1eb}.onboarding-card{width:min(680px,100%);background:#fffdfa;border:1px solid #d8d1c6;border-radius:16px;padding:38px;box-shadow:0 18px 45px rgba(44,34,23,.12)}.onboarding-progress{height:5px;background:#e5ded4;border-radius:4px;margin-bottom:32px}.onboarding-progress span{display:block;height:100%;width:12.5%;background:#b35400;border-radius:4px;transition:width .2s}.onboarding-step{display:none}.onboarding-step.active{display:block}.onboarding-step h2{font:700 var(--font-2xl)/var(--line-height-heading) Arial,sans-serif;color:#211e1a;margin:12px 0}.onboarding-step p{font:var(--font-md)/var(--line-height-body) Arial,sans-serif;color:#6f675e}.onboarding-step label{display:block;margin:20px 0 0;font:700 var(--font-base) Arial,sans-serif;color:#302a24}.onboarding-step input,.onboarding-step select,.onboarding-step textarea{display:block;width:100%;margin-top:8px;padding:13px;border:1px solid #cfc5b8;border-radius:8px;background:#fff;color:#211e1a;font:var(--font-md) Arial,sans-serif}.onboarding-options{display:grid;gap:10px;margin-top:24px}.onboarding-options button{padding:15px;text-align:left;border:1px solid #cfc5b8;border-radius:8px;background:#fff;color:#302a24;font:var(--font-md) Arial,sans-serif}.onboarding-options button.selected,.onboarding-options button:hover{border-color:#b35400;background:#fff0df}.onboarding-info{padding:20px;border-radius:10px;background:#f1ebe3;color:#4b4239;font:var(--font-md)/var(--line-height-body) Arial,sans-serif;margin-top:24px}.onboarding-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}.check-row{display:flex!important;align-items:center;gap:10px}.check-row input{width:18px!important;margin:0!important}.message-filters{width:min(1050px,100%);margin:0 auto 14px;display:flex;gap:8px}.message-filter{border:1px solid #cfc5b8;background:#fffdfa;color:#5f574e;border-radius:18px;padding:8px 16px;font:var(--font-sm) Arial,sans-serif}.message-filter.active,.message-filter:hover{background:#087f5b;color:#fff;border-color:#087f5b}.conversation-list-head input{width:100%;margin-top:10px;padding:8px;border:1px solid #cfc5b8;border-radius:6px;background:#fff;color:#302a24;font:var(--font-base) Arial,sans-serif}.empty-chat{margin:auto;color:#6f675e;font:var(--font-md) Arial,sans-serif;text-align:center}.skill-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 10px}.skill-options label{margin:0!important;padding:9px;background:#f1ebe3;border-radius:6px;font-weight:400!important}.skill-options input{display:inline!important;width:auto!important;margin:0 6px 0 0!important}
 .light-mode .site-footer{border-color:#d8d1c6}.light-mode .messages-layout{background:transparent}.light-mode .onboarding-card{background:#fffdfa}
-body{font-size:16px}.screen-head p:last-child{font-size:14px}.tiny-label{font-size:11px}.nav-link,.login-link{font-size:13px}.pill-btn{font-size:14px}.small-dark-btn,.mini-btn{font-size:13px}
-@media(max-width:650px){.site-footer{width:calc(100% - 30px);flex-wrap:wrap;font-size:12px}.site-footer nav{order:3;width:100%;flex-wrap:wrap}.onboarding-card{padding:24px}.onboarding-step h2{font-size:24px}.skill-options{grid-template-columns:1fr}}
+body{font-size:var(--font-base)}.screen-head p:last-child{font-size:var(--font-base)}.tiny-label{font-size:var(--font-xs)}.nav-link,.login-link{font-size:var(--font-base)}.pill-btn{font-size:var(--font-base)}.small-dark-btn,.mini-btn{font-size:var(--font-sm)}
+@media(max-width:900px){.topbar{gap:18px}.nav{gap:14px}.site-footer .footer-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:650px){.site-footer{width:calc(100% - 30px)}.site-footer .footer-inner{grid-template-columns:1fr;gap:20px}.site-footer .footer-brand{max-width:520px}.site-footer .footer-nav{flex-direction:row;flex-wrap:wrap;gap:12px 18px}.site-footer .socials{flex-wrap:wrap}.onboarding-card{padding:24px}.onboarding-step h2{font-size:var(--font-xl)}.skill-options{grid-template-columns:1fr}}
+
+html.light-mode body:not(:has(#welcome.active)){
+    --palette-khaki:#b8a77a;
+    --palette-khaki-deep:#716344;
+    --palette-paper:#fffdf8;
+    --palette-orange:#e87917;
+    --palette-ink:#4c4232;
+    --palette-muted:#786f5e;
+    --palette-line:#e2d8c5;
+    --bg:#f4f0e6;
+    --panel:#fffdf8;
+    --line:#e2d8c5;
+    --text:#4c4232;
+    --muted:#786f5e;
+    --orange:#e87917;
+    background:#f4f0e6;
+    color:#4c4232
+}
+html.light-mode body:not(:has(#welcome.active)) .site-bg{background:#f4f0e6}
+html.light-mode body:not(:has(#welcome.active)) .topbar{background:rgba(255,253,248,.96);border-color:#e2d8c5}
+html.light-mode body:not(:has(#welcome.active)) .brand,
+html.light-mode body:not(:has(#welcome.active)) .nav-link,
+html.light-mode body:not(:has(#welcome.active)) .login-link{color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .nav-link:hover,
+html.light-mode body:not(:has(#welcome.active)) .nav-link.active,
+html.light-mode body:not(:has(#welcome.active)) .login-link:hover{color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) .theme-toggle{background:#fffdf8;border-color:#b8a77a;color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) .pill-orange,
+html.light-mode body:not(:has(#welcome.active)) .client-post-job-btn,
+html.light-mode body:not(:has(#welcome.active)) .client-hire-cta,
+html.light-mode body:not(:has(#welcome.active)) .worker-result-actions .worker-message-btn,
+html.light-mode body:not(:has(#welcome.active)) .chat-form button{background:#e87917!important;color:#fffdf8!important}
+html.light-mode body:not(:has(#welcome.active)) .pill-dark,
+html.light-mode body:not(:has(#welcome.active)) .pill-outline,
+html.light-mode body:not(:has(#welcome.active)) .small-dark-btn,
+html.light-mode body:not(:has(#welcome.active)) .mini-btn,
+html.light-mode body:not(:has(#welcome.active)) .job-btn,
+html.light-mode body:not(:has(#welcome.active)) .menu-btn{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .screen:not(#welcome),
+html.light-mode body:not(:has(#welcome.active)) .site-footer{color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) #profile.screen.active,
+html.light-mode body:not(:has(#welcome.active)) #messages.screen.active,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard.screen.active{background:#f4f0e6;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-cover{background:#b8a77a;color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-cover .tiny-label,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-cover-content>p:not(.tiny-label){color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-page,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-sidebar,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-main,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard .client-empty-panel{background:#fffdf8;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-name,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-main,
+html.light-mode body:not(:has(#welcome.active)) #profile .panel-title h3,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-directory-content>h1,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-results-heading h1,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard .client-dashboard-heading>h1{color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-role,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-fact p,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-directory-intro,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-results-heading>p:not(.tiny-label),
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-result-description,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard .client-empty-panel>p{color:#786f5e}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-action,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-tab,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-tab.active,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-tab:hover,
+html.light-mode body:not(:has(#welcome.active)) #profile .small-dark-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .mini-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-result-actions button,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-worker-search,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-result-card,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-directory-empty,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-directory-loading,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-directory-error,
+html.light-mode body:not(:has(#welcome.active)) #profile .resume-box,
+html.light-mode body:not(:has(#welcome.active)) #profile .myjob-row,
+html.light-mode body:not(:has(#welcome.active)) #profile .status-row{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-fact h2,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-section-label,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-directory-content>.tiny-label,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-results-heading .tiny-label,
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-result-name,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-back-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-breadcrumb button,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-category-group button{color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-action:hover,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-tab.active,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-tab:hover,
+html.light-mode body:not(:has(#welcome.active)) #profile .client-category-group button:hover{background:#f0eadb;color:#716344}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-verification b,
+html.light-mode body:not(:has(#welcome.active)) #profile .browse-resumes-btn,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard .browse-resumes-btn{background:#e87917;color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) #profile .browse-resumes-btn:hover,
+html.light-mode body:not(:has(#welcome.active)) #clientDashboard .browse-resumes-btn:hover{background:#c86210}
+html.light-mode body:not(:has(#welcome.active)) #profile .client-people-icon{fill:#b8a77a;stroke:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) #profile .worker-result-avatar{background:#f0eadb;border-color:#b8a77a;color:#716344}
+html.light-mode body:not(:has(#welcome.active)) #profile .status-approved,
+html.light-mode body:not(:has(#welcome.active)) #profile .status-rejected,
+html.light-mode body:not(:has(#welcome.active)) #profile .status-chip,
+html.light-mode body:not(:has(#welcome.active)) #profile .pinned-worker-remove{color:#716344}
+html.light-mode body:not(:has(#welcome.active)) #profile .accept-application-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .reject-application-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .cancel-application-btn,
+html.light-mode body:not(:has(#welcome.active)) #profile .logout-btn{color:#e87917;border-color:#b8a77a}
+html.light-mode body:not(:has(#welcome.active)) .category-btn,
+html.light-mode body:not(:has(#welcome.active)) .job-card,
+html.light-mode body:not(:has(#welcome.active)) .side-panel,
+html.light-mode body:not(:has(#welcome.active)) .score-panel,
+html.light-mode body:not(:has(#welcome.active)) .module-card,
+html.light-mode body:not(:has(#welcome.active)) .conversation-list,
+html.light-mode body:not(:has(#welcome.active)) .chat-window,
+html.light-mode body:not(:has(#welcome.active)) .modal-card{background:#fffdf8;border-color:#e2d8c5;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .category-btn.active,
+html.light-mode body:not(:has(#welcome.active)) .category-btn:hover,
+html.light-mode body:not(:has(#welcome.active)) .job-tags span,
+html.light-mode body:not(:has(#welcome.active)) .conversation.active,
+html.light-mode body:not(:has(#welcome.active)) .conversation:hover{background:#f0eadb;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .job-card h3,
+html.light-mode body:not(:has(#welcome.active)) .job-card>p,
+html.light-mode body:not(:has(#welcome.active)) .detail-grid h2,
+html.light-mode body:not(:has(#welcome.active)) .screen-head h2,
+html.light-mode body:not(:has(#welcome.active)) .conversation strong,
+html.light-mode body:not(:has(#welcome.active)) .chat-head h3{color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .job-card .match,
+html.light-mode body:not(:has(#welcome.active)) .job-detail-section h4,
+html.light-mode body:not(:has(#welcome.active)) .job-detail-section p,
+html.light-mode body:not(:has(#welcome.active)) .job-detail-section .job-application-method,
+html.light-mode body:not(:has(#welcome.active)) .screen-head p:last-child,
+html.light-mode body:not(:has(#welcome.active)) .detail-copy,
+html.light-mode body:not(:has(#welcome.active)) .conversation p,
+html.light-mode body:not(:has(#welcome.active)) .chat-head p,
+html.light-mode body:not(:has(#welcome.active)) .message-profile-hint{color:#786f5e}
+html.light-mode body:not(:has(#welcome.active)) .company-logo,
+html.light-mode body:not(:has(#welcome.active)) .skill-card,
+html.light-mode body:not(:has(#welcome.active)) .score-bar i,
+html.light-mode body:not(:has(#welcome.active)) .readiness-bar i{background:#b8a77a;color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) .skill-card small,
+html.light-mode body:not(:has(#welcome.active)) .skill-card span{color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) .s-purple,
+html.light-mode body:not(:has(#welcome.active)) .s-blue,
+html.light-mode body:not(:has(#welcome.active)) .s-green,
+html.light-mode body:not(:has(#welcome.active)) .s-orange,
+html.light-mode body:not(:has(#welcome.active)) .s-red,
+html.light-mode body:not(:has(#welcome.active)) .s-lime,
+html.light-mode body:not(:has(#welcome.active)) .s-indigo,
+html.light-mode body:not(:has(#welcome.active)) .s-gold{background:#b8a77a}
+html.light-mode body:not(:has(#welcome.active)) .conversation{background:#fffdf8;border-color:#e2d8c5;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .conversation-avatar,
+html.light-mode body:not(:has(#welcome.active)) .chat-avatar,
+html.light-mode body:not(:has(#welcome.active)) .bubble-avatar{background:#f0eadb;border-color:#b8a77a;color:#716344}
+html.light-mode body:not(:has(#welcome.active)) .bubble.them{background:#f0eadb;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .bubble.me{background:#e87917;border-color:#e87917;color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) .chat-form,
+html.light-mode body:not(:has(#welcome.active)) .conversation-list-head,
+html.light-mode body:not(:has(#welcome.active)) .chat-head{border-color:#e2d8c5}
+html.light-mode body:not(:has(#welcome.active)) .chat-form input,
+html.light-mode body:not(:has(#welcome.active)) .job-toolbar input,
+html.light-mode body:not(:has(#welcome.active)) .application-answer-label textarea,
+html.light-mode body:not(:has(#welcome.active)) .account-form input,
+html.light-mode body:not(:has(#welcome.active)) .account-form textarea{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .chat-form input::placeholder,
+html.light-mode body:not(:has(#welcome.active)) .application-answer-label,
+html.light-mode body:not(:has(#welcome.active)) .job-tags span{color:#786f5e}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-action,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-fact-heading button,
+html.light-mode body:not(:has(#welcome.active)) #profile .rating-stars,
+html.light-mode body:not(:has(#welcome.active)) #messages .screen-head h2 span{color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-action{border-color:#b8a77a}
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-action:focus-visible,
+html.light-mode body:not(:has(#welcome.active)) #profile .profile-avatar:focus-visible{outline-color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) #profile .status-chip{background:#f0eadb}
+html.light-mode body:not(:has(#welcome.active)) #profile .status-approved,
+html.light-mode body:not(:has(#welcome.active)) #profile .status-rejected{color:#716344}
+html.light-mode body:not(:has(#welcome.active)) .message-filter{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .message-filter.active,
+html.light-mode body:not(:has(#welcome.active)) .message-filter:hover{background:#e87917;border-color:#e87917;color:#fffdf8}
+html.light-mode body:not(:has(#welcome.active)) .role-card.client,
+html.light-mode body:not(:has(#welcome.active)) .role-card.worker{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .role-card:hover{background:#f0eadb}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-card,
+html.light-mode body:not(:has(#welcome.active)) .choice,
+html.light-mode body:not(:has(#welcome.active)) .account-switch button,
+html.light-mode body:not(:has(#welcome.active)) .resume-box,
+html.light-mode body:not(:has(#welcome.active)) .status-row{background:#fffdf8;border-color:#e2d8c5;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-step h2,
+html.light-mode body:not(:has(#welcome.active)) .onboarding-step label,
+html.light-mode body:not(:has(#welcome.active)) .modal-card h3,
+html.light-mode body:not(:has(#welcome.active)) .modal-card .tiny-label{color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-step p,
+html.light-mode body:not(:has(#welcome.active)) .choice span,
+html.light-mode body:not(:has(#welcome.active)) .modal-card>p:not(.tiny-label){color:#786f5e}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-progress,
+html.light-mode body:not(:has(#welcome.active)) .readiness-bar,
+html.light-mode body:not(:has(#welcome.active)) .score-bar{background:#e2d8c5}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-progress span{background:#e87917}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-options button,
+html.light-mode body:not(:has(#welcome.active)) .skill-options label{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-options button.selected,
+html.light-mode body:not(:has(#welcome.active)) .onboarding-options button:hover{background:#f0eadb;border-color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) .onboarding-info{background:#f0eadb;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .site-footer .socials button{background:#fffdf8;border-color:#b8a77a;color:#4c4232}
+html.light-mode body:not(:has(#welcome.active)) .site-footer .footer-nav button:hover,
+html.light-mode body:not(:has(#welcome.active)) .site-footer .socials button:hover{color:#e87917}
+html.light-mode body:not(:has(#welcome.active)) .topbar .brand-logo,
+html.light-mode body:not(:has(#welcome.active)) .topbar .mini-logo{filter:sepia(1) saturate(3) hue-rotate(-15deg)}
+html.light-mode #profile #workerProfileView :not(#profileName):not(#profileBannerName):not(#profileBannerTitle):not(.tiny-label){color:#4c4232!important}
+
+html.dark-mode body{background:#070707;color:#f5f5f5}
+html.dark-mode .site-bg{background:radial-gradient(circle at 85% 10%,rgba(255,138,0,.08),transparent 28%),#070707}
+html.dark-mode .topbar{background:rgba(7,7,7,.94);border-color:#292929}
+html.dark-mode .brand,html.dark-mode .nav-link,html.dark-mode .login-link{color:#f5f5f5}
+html.dark-mode .nav-link:not(.active),html.dark-mode .login-link{color:#b8b8b8}
+html.dark-mode .theme-toggle{background:#151515;border-color:#494033;color:#f7c46c}
+html.dark-mode .screen:not(#welcome),html.dark-mode .site-footer{color:#f5f5f5}
+html.dark-mode .about-card{background:#101010;border-color:#39332a;color:#f5f5f5}
+html.dark-mode .about-card h2,html.dark-mode .about-card>p:not(.tiny-label){color:#f5f5f5}
+html.dark-mode .how-it-works-faq details{background:#171717;border-color:#39332a}
+html.dark-mode .how-it-works-faq summary,html.dark-mode .how-it-works-faq details p{color:#e4ded4}
+html.dark-mode #profile.screen.active,html.dark-mode #clientDashboard.screen.active{background:#070707;color:#f5f5f5}
+html.dark-mode #profile .client-workspace{background:#070707;color:#f5f5f5}
+html.dark-mode #profile .profile-cover{background:#716344;color:#fffdf8}
+html.dark-mode #profile .profile-page,html.dark-mode #profile .profile-main,html.dark-mode #profile .profile-sidebar{background:#101010;color:#f5f5f5}
+html.dark-mode #profile .profile-name,html.dark-mode #profile .panel-title h3,html.dark-mode #profile .profile-fact p{color:#f5f5f5}
+html.dark-mode #profile .profile-role,html.dark-mode #profile .profile-fact h2,html.dark-mode #profile .profile-section-label{color:#c5b997}
+html.dark-mode #profile .ratings-card,html.dark-mode #profile .resume-box,html.dark-mode #profile .myjob-row,html.dark-mode #profile .status-row,
+html.dark-mode #profile .worker-result-card,html.dark-mode #profile .worker-directory-empty,html.dark-mode #profile .worker-directory-loading,
+html.dark-mode #profile .worker-directory-error,html.dark-mode #profile .pinned-worker-row,html.dark-mode #profile .hired-worker-section,
+html.dark-mode #profile .hired-worker-card,html.dark-mode #clientDashboard .client-empty-panel,html.dark-mode #clientDashboard .client-hired-card{
+    background:#171717;border-color:#39332a;color:#f5f5f5
+}
+html.dark-mode #profile .profile-tab,html.dark-mode #profile .profile-action,html.dark-mode #profile .small-dark-btn,
+html.dark-mode #profile .mini-btn,html.dark-mode #profile .worker-result-actions button,html.dark-mode #clientDashboard .client-logout-btn{
+    background:#171717;border-color:#716344;color:#f5f5f5
+}
+html.dark-mode #profile .profile-tab.active,html.dark-mode #profile .profile-tab:hover,html.dark-mode #profile .profile-action:hover{
+    background:#29251e;color:#f5f5f5
+}
+html.dark-mode #profile .worker-result-description,html.dark-mode #profile .client-directory-intro,
+html.dark-mode #profile .client-results-heading>p:not(.tiny-label),html.dark-mode #profile .pinned-worker-row small,
+html.dark-mode #clientDashboard .client-empty-panel>p,html.dark-mode #clientDashboard .client-hired-card>span{color:#c1b8aa}
+html.dark-mode #profile #workerProfileView :not(#profileName):not(#profileBannerName):not(#profileBannerTitle):not(.tiny-label){color:#e8e2d8!important}
+html.dark-mode #profile .client-worker-search,html.dark-mode #profile .worker-directory-search input,
+html.dark-mode .job-toolbar input,html.dark-mode .application-answer-label textarea,html.dark-mode .account-form input,
+html.dark-mode .account-form textarea,html.dark-mode .account-form select{
+    background:#171717;border-color:#716344;color:#f5f5f5
+}
+html.dark-mode .onboarding-screen{background:#070707}
+html.dark-mode .onboarding-card,html.dark-mode .choice,html.dark-mode .account-switch button{background:#101010;border-color:#39332a;color:#f5f5f5}
+html.dark-mode .onboarding-step h2,html.dark-mode .onboarding-step label{color:#f5f5f5}
+html.dark-mode .onboarding-step p,html.dark-mode .choice span,html.dark-mode .modal-card>p:not(.tiny-label){color:#c1b8aa}
+html.dark-mode .onboarding-step input,html.dark-mode .onboarding-step select,html.dark-mode .onboarding-step textarea{background:#171717;border-color:#716344;color:#f5f5f5}
+html.dark-mode .site-footer .footer-nav button,html.dark-mode .site-footer .footer-desc,html.dark-mode .site-footer .footer-contact address{color:#b8b8b8}
+html.dark-mode .site-footer .socials button{background:#171717;border-color:#494033;color:#f5f5f5}
+html.dark-mode #messages.screen.active{background:#070707;color:#f5f5f5}
+html.dark-mode #messages .screen-head h2,html.dark-mode #messages .conversation-list-head h3,
+html.dark-mode #messages .conversation strong,html.dark-mode #messages .chat-head h3{color:#f5f5f5}
+html.dark-mode #messages .screen-head p:last-child,html.dark-mode #messages .conversation p,
+html.dark-mode #messages .conversation small,html.dark-mode #messages .chat-head p{color:#c1b8aa}
+html.dark-mode #messages .conversation-list,html.dark-mode #messages .chat-window,
+html.dark-mode #messages .conversation-list-head,html.dark-mode #messages .chat-head,
+html.dark-mode #messages .chat-form{background:#101010;border-color:#39332a}
+html.dark-mode #messages .conversation{background:#101010;border-color:#29251e;color:#f5f5f5}
+html.dark-mode #messages .conversation.active,html.dark-mode #messages .conversation:hover{background:#29251e}
+html.dark-mode #messages .chat-messages{background:#070707}
+html.dark-mode #messages .bubble.them{background:#171717;border-color:#494033;color:#f5f5f5}
+html.dark-mode #messages .bubble.me{background:#e87917;border-color:#e87917;color:#fffdf8}
+html.dark-mode #messages .chat-form input,html.dark-mode #messages .conversation-list-head input{
+    background:#171717;border-color:#716344;color:#f5f5f5
+}
+html.dark-mode #messages .chat-form input::placeholder,html.dark-mode #messages .conversation-list-head input::placeholder{color:#a99e8c}
+html.dark-mode #messages .empty-chat,html.dark-mode #messages .message-loading{color:#c1b8aa}
+html.dark-mode .job-detail-section h4,html.dark-mode .job-detail-section p,
+html.dark-mode .job-detail-section .job-application-method,html.dark-mode .application-answer-label{color:#e8e2d8}
+html.dark-mode .application-answer-label textarea{background:#171717;border-color:#716344;color:#f5f5f5}

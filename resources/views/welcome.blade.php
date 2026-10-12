@@ -6,6 +6,7 @@
     @include('partials.opportunities')
     @include('partials.profile')
     @include('partials.messages')
+    @include('partials.feedback')
     @include('partials.about')
     @include('partials.onboarding')
     @include('partials.modals')

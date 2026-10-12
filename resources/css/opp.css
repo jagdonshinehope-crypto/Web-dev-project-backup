@@ -1,1 +1,37 @@
-.opportunities-wrap{width:min(1100px,100%);margin:0 auto}.category-bar,.filters{display:flex;flex-wrap:wrap;gap:7px;margin:0 auto 15px}.category-btn{border:1px solid #292929;background:#0f0f0f;color:#777;padding:8px 10px;border-radius:7px;font:9px Arial,sans-serif}.category-btn.active,.category-btn:hover{background:#1b1b1b;color:#fff;border-color:#404040}.job-toolbar{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}.job-toolbar input{background:#0e0e0e;color:#fff;border:1px solid #282828;border-radius:7px;padding:9px 11px;font:9px Arial,sans-serif;min-width:250px;outline:none}.job-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.job-card{background:#0c0c0c;border:1px solid #222;border-radius:12px;padding:15px;transition:.2s}.job-card:hover{border-color:#333;background:#0f0f0f}.company-line{display:flex;align-items:center;justify-content:space-between}.company-logo{width:29px;height:29px;border-radius:8px;display:grid;place-items:center;background:#263f67;font:800 10px Arial,sans-serif}.match{font:8px Arial,sans-serif;color:#6cd09c}.job-card h3{font-size:15px;font-weight:500;margin:14px 0 5px}.job-card>p{font:8px Arial,sans-serif;color:#777;margin:0}.job-tags{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0}.job-tags span{background:#151515;border:1px solid #252525;border-radius:999px;padding:5px 7px;color:#777;font:7px Arial,sans-serif}.job-btn{width:100%;border:1px solid #2a2a2a;background:#151515;color:#fff;border-radius:6px;padding:9px;font:9px Arial,sans-serif}.job-btn:hover{background:#1d1d1d}.no-results{grid-column:1/-1;text-align:center;border:1px dashed #2b2b2b;border-radius:12px;padding:28px;color:#777;font:10px Arial,sans-serif}@media(max-width:900px){.job-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.job-toolbar{flex-direction:column}.job-toolbar input{width:100%;min-width:0}.job-grid{grid-template-columns:1fr}.category-bar{gap:5px}.category-btn{padding:7px 9px}}
+.opportunities-wrap
+{
+    width:min(1100px,100%);margin:0 auto}.category-bar,.filters{display:flex;flex-wrap:wrap;gap:7px;margin:0 auto 15px}.category-btn{border:1px solid #292929;background:#0f0f0f;color:#777;padding:8px 10px;border-radius:7px;font:9px Arial,sans-serif}.category-btn.active,.category-btn:hover{background:#1b1b1b;color:#fff;border-color:#404040}.job-toolbar{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}.job-toolbar input{background:#0e0e0e;color:#fff;border:1px solid #282828;border-radius:7px;padding:9px 11px;font:9px Arial,sans-serif;min-width:250px;outline:none}.job-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.job-card{background:#0c0c0c;border:1px solid #222;border-radius:12px;padding:15px;transition:.2s}.job-card:hover{border-color:#333;background:#0f0f0f}.company-line{display:flex;align-items:center;justify-content:space-between}.company-logo{width:29px;height:29px;border-radius:8px;display:grid;place-items:center;background:#263f67;font:800 10px Arial,sans-serif}.match{font:8px Arial,sans-serif;color:#6cd09c}.job-card h3{font-size:15px;font-weight:500;margin:14px 0 5px}.job-card>p{font:8px Arial,sans-serif;color:#777;margin:0}.job-tags{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0}.job-tags span{background:#151515;border:1px solid #252525;border-radius:999px;padding:5px 7px;color:#777;font:7px Arial,sans-serif}.job-btn{width:100%;border:1px solid #2a2a2a;background:#151515;color:#fff;border-radius:6px;padding:9px;font:9px Arial,sans-serif}.job-btn:hover{background:#1d1d1d}.no-results{grid-column:1/-1;text-align:center;border:1px dashed #2b2b2b;border-radius:12px;padding:14px}
+#jobModal .modal-card{width:min(620px,100%)}
+.job-details{display:grid;gap:14px;margin-top:18px}
+.job-details.hidden{display:none}
+.category-bar,.filters,.job-toolbar{font-size:9px}
+.category-btn,.job-toolbar input{font-size:var(--font-base)}
+#opportunities .screen-head .tiny-label,#opportunities .screen-head p:not(.tiny-label){font-size:16px}
+.job-card h3{font-family:Georgia,'Times New Roman',serif;font-size:var(--font-lg);line-height:var(--line-height-heading);letter-spacing:-.02em}
+.job-card>p{font-family:Arial,sans-serif;font-size:var(--font-sm);line-height:var(--line-height-body)}
+.job-card{font-size:16px}
+.job-card h3{font-size:var(--font-lg);line-height:var(--line-height-heading)}
+.job-card>p{font-size:var(--font-sm);line-height:var(--line-height-body)}
+.job-card .match{font-size:var(--font-xs)}
+.job-tags span{font:500 var(--font-xs)/var(--line-height-body) Arial,sans-serif}
+.job-btn{font:600 var(--font-base)/var(--line-height-heading) Arial,sans-serif;overflow-wrap:anywhere}
+.job-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.job-card h3,.job-card>p{overflow-wrap:anywhere}
+#jobTitle{font-family:Georgia,'Times New Roman',serif;font-size:clamp(var(--font-xl),3vw,var(--font-2xl));line-height:var(--line-height-heading);letter-spacing:-.02em}
+.modal-card #jobCopy{font:var(--font-md)/var(--line-height-body) Arial,sans-serif}
+.job-summary strong,.job-summary p{font:var(--font-md)/var(--line-height-body) Arial,sans-serif;overflow-wrap:anywhere}
+@media(max-width:900px){.job-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.job-grid{grid-template-columns:minmax(0,1fr)}}
+.job-detail-section{padding-top:13px;border-top:1px solid #292929}
+.job-detail-section h4{margin:0 0 7px;color:#716344;font:700 var(--font-sm) Arial,sans-serif;letter-spacing:.08em}
+.job-detail-section p{margin:0;color:#4c4232;font:var(--font-md)/var(--line-height-body) Arial,sans-serif;white-space:pre-line}
+.job-detail-section .job-application-method{margin-top:7px;color:#625846;font-size:var(--font-base)}
+.application-answer-label{display:block;margin-top:18px;color:#625846;font:var(--font-sm) Arial,sans-serif}
+.application-answer-label textarea{display:block;width:100%;margin-top:6px;padding:10px;background:#fff;color:#4c4232;border:1px solid #b8a77a;border-radius:7px;font:var(--font-base)/var(--line-height-body) Arial,sans-serif;resize:vertical}
+.light-mode .job-detail-section{border-color:#d8d1c6}
+.light-mode .job-detail-section h4{color:#6f675e}
+.light-mode .job-detail-section p{color:#302b25}
+.light-mode .job-detail-section .job-application-method{color:#756d64}
+.light-mode .application-answer-label{color:#756d64}
+.light-mode .application-answer-label textarea{background:#fffdfa;color:#211e1a;border-color:#cfc5b8}
+@media(max-width:650px){#jobModal .modal-card{max-height:88vh}.job-details{gap:11px}.job-card{padding:13px}.job-card h3{font-size:var(--font-md)}}

@@ -1,0 +1,17 @@
+.feedback-screen{align-items:center;justify-content:center;background:transparent}
+.feedback-card{width:min(720px,100%);padding:clamp(22px,4vw,42px);border:1px solid #ded4c0;border-radius:14px;background:#fffdf8;box-shadow:0 18px 45px rgba(44,34,23,.08);color:#4c4232}
+.feedback-card h1{margin:8px 0 12px;font:600 clamp(1.75rem,3vw,2.25rem)/var(--line-height-heading) Arial,sans-serif;color:#4c4232}
+.feedback-intro{max-width:600px;color:#786f5e;font:var(--font-md)/var(--line-height-body) Arial,sans-serif}
+.feedback-form{display:grid;gap:10px}
+.feedback-form label{margin-top:8px;color:#4c4232;font:700 var(--font-base) Arial,sans-serif}
+.feedback-form select,.feedback-form textarea{width:100%;padding:12px 14px;border:1px solid #b8a77a;border-radius:7px;background:#fff;color:#4c4232;font:var(--font-base)/var(--line-height-body) Arial,sans-serif}
+.feedback-form textarea{min-height:150px;resize:vertical}
+.feedback-form select:focus-visible,.feedback-form textarea:focus-visible{outline:2px solid #e87917;outline-offset:2px}
+.feedback-form .pill-btn{justify-self:start;margin-top:8px}
+.feedback-form .pill-btn:disabled{cursor:wait;opacity:.7}
+.feedback-status{margin:0;padding:10px 12px;border-radius:6px;background:#f0eadb;color:#4c4232;font:var(--font-base)/var(--line-height-body) Arial,sans-serif}
+.dark-mode .feedback-card{background:#101010;border-color:#39332a;color:#f5f5f5}
+.dark-mode .feedback-card h1,.dark-mode .feedback-form label{color:#f5f5f5}
+.dark-mode .feedback-intro{color:#c1b8aa}
+.dark-mode .feedback-form select,.dark-mode .feedback-form textarea{background:#171717;border-color:#716344;color:#f5f5f5}
+.dark-mode .feedback-status{background:#29251e;color:#f5f5f5}
